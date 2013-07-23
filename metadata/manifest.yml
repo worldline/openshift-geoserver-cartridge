@@ -1,0 +1,41 @@
+Name: geoserver
+Cartridge-Short-Name: GEOSERVER
+Architecture: noarch
+Display-Name: GEO SERVER 2.3.3
+Description: "GeoServer is an open source software server written in Java that allows users to share and edit geospatial data. Designed for interoperability, it publishes data from any major spatial data source using open standards."
+Version: '2.3.3'
+Versions: [2.3.3]
+Cartridge-Version: 0.1.0
+Cartridge-Vendor: worldline
+License: MIT License
+Vendor: Mit
+Categories:
+  - service
+  - database
+  - embedded
+Website: http://geoserver.org/
+Publishes:
+  publish-http-url:
+    Type: "NET_TCP:httpd-proxy-info"
+  publish-gear-endpoint:
+    Type: "NET_TCP:gear-endpoint-info"
+Cart-Data:
+ - Key: OPENSHIFT_GEOSERVER_LOG_DIR
+   Type: environment
+   Description: "Directory to store application log files."
+ - Key: OPENSHIFT_GEAR_DNS
+   Type: environment
+   Description: "Fully qualified domain name for the application."
+Provides:
+  - geoserver
+Scaling:
+  Min: 1
+  Max: -1
+Endpoints:
+  - Private-IP-Name:   DB_HOST
+    Private-Port-Name: DB_PORT
+    Private-Port:      8090
+    Public-Port-Name:  DB_PROXY_PORT
+    Mappings:
+      - Frontend:      "/geoserver"
+        Backend:       "/geoserver"

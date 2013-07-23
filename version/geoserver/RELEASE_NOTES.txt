@@ -1,0 +1,11 @@
+GeoServer 2.3.3
+-------------------
+
+This release was built on Jun 22, 2013. The changelog for this release can be found:
+
+  http://jira.codehaus.org/browse/GEOS/fixforversion/19231
+
+This release is based on:
+
+  GeoTools 9.3
+  GeoWebCache 1.4-M20130509a

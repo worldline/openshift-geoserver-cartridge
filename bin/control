@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# TODO: account for standalone scenario
+# TODO: source user hooks?
+# Start mysqld and block until it comes up.
+PATH=/bin/:/usr/bin:$PATH
+
+source $OPENSHIFT_CARTRIDGE_SDK_BASH
+export JAVA_HOME=/usr/lib/jvm/java-1.7.0/
+export GEOSERVER_HOME=$OPENSHIFT_GEOSERVER_DIR/version/geoserver/
+export GEOSERVER_DATA_DIR="$GEOSERVER_HOME"data_dir
+export JAVA="$JAVA_HOME"/bin/java
+export JAVA_OPTS="-XX:MaxPermSize=128m"
+
+function start {
+	cd "$GEOSERVER_HOME"
+    $JAVA $JAVA_OPTS -DGEOSERVER_DATA_DIR="$GEOSERVER_DATA_DIR" \
+    -Djava.awt.headless=true \
+    -DSTOP.PORT=8079 \
+    -DSTOP.KEY=geoserver \
+    -jar start.jar > $OPENSHIFT_GEOSERVER_LOG_DIR/logs 2>&1 &
+}
+function stop {
+  $OPENSHIFT_GEOSERVERL_DIR/version/geoserver/bin/shutdown.sh
+}
+function status {
+  echo "Not currently made"
+}
+
+function build {
+  echo "Nothing to build"
+}
+case "$1" in
+  start) start ;;
+  stop) stop ;;
+  restart) restart ;;
+  status) status ;;
+  tidy) tidy ;;
+esac
