@@ -16,3 +16,7 @@ of use:
     OPENSHIFT_GEOSERVER_DB_HOST     	 	The GEOSERVERGEOSERVERGEOSERVER IP address
     OPENSHIFT_GEOSERVERGEOSERVER_DB_PORT    The GEOSERVERGEOSERVER port
     OPENSHIFT_GEOSERVER_DB_LOG_DIR   		The path to the GEOSERVER log directory
+
+## Demo
+
+http://www.youtube.com/watch?v=8zY4kef3Nz0
