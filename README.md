@@ -4,6 +4,10 @@ The `GeoServer` cartridge provides [GeoServer](http://www.GeoServer.com/) on Ope
 
 This cartridge not work in small gears.
 
+## Use it
+
+In OpenShift, choose a downloaded cartridge, with the following URL : http://cartreflect-claytondev.rhcloud.com/reflect?github=worldline/openshift-geoserver-cartridge
+
 ## Environment Variables
 
 The `GeoServer` cartridge provides several environment variables to reference for ease
