@@ -21,7 +21,7 @@ function start {
     -jar start.jar > $OPENSHIFT_GEOSERVER_LOG_DIR/logs 2>&1 &
 }
 function stop {
-  $OPENSHIFT_GEOSERVERL_DIR/version/geoserver/bin/shutdown.sh
+  $OPENSHIFT_GEOSERVER_DIR/version/geoserver/bin/shutdown.sh
 }
 function status {
   echo "Not currently made"
