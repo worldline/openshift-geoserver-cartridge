@@ -16,8 +16,8 @@ Geoserver is deployed on `/geoserver` URL
 The `GeoServer` cartridge provides several environment variables to reference for ease
 of use:
 
-    OPENSHIFT_GEOSERVER_DB_HOST     	 	The GEOSERVERGEOSERVERGEOSERVER IP address
-    OPENSHIFT_GEOSERVERGEOSERVER_DB_PORT    The GEOSERVERGEOSERVER port
+    OPENSHIFT_GEOSERVER_DB_HOST     	 	The GEOSERVER IP address
+    OPENSHIFT_GEOSERVER_DB_PORT                 The GEOSERVER port
     OPENSHIFT_GEOSERVER_DB_LOG_DIR   		The path to the GEOSERVER log directory
 
 ## Demo
