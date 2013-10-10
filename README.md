@@ -2,11 +2,13 @@
 
 The `GeoServer` cartridge provides [GeoServer](http://www.GeoServer.com/) on OpenShift.
 
-This cartridge not work in small gears.
+This cartridge does't work in small gears.
 
 ## Use it
 
-In OpenShift, choose a downloaded cartridge, with the following URL : http://cartreflect-claytondev.rhcloud.com/reflect?github=worldline/openshift-geoserver-cartridge
+In OpenShift, first create a web application (java, python, ruby, node... as you want), 
+then add a downloaded cartridge, with the following URL : http://cartreflect-claytondev.rhcloud.com/reflect?github=worldline/openshift-geoserver-cartridge
+
 
 ## Environment Variables
 
