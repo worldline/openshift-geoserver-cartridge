@@ -20,9 +20,16 @@ function start {
     -DSTOP.KEY=geoserver \
     -jar start.jar > $OPENSHIFT_GEOSERVER_LOG_DIR/logs 2>&1 &
 }
+
 function stop {
   $OPENSHIFT_GEOSERVER_DIR/version/geoserver/bin/shutdown.sh
 }
+
+function restart {
+    stop
+    start
+}
+
 function status {
   echo "Not currently made"
 }
@@ -30,6 +37,11 @@ function status {
 function build {
   echo "Nothing to build"
 }
+
+function tidy {
+  echo "Not currently made"
+}
+
 case "$1" in
   start) start ;;
   stop) stop ;;
