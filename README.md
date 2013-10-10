@@ -2,8 +2,6 @@
 
 The `GeoServer` cartridge provides [GeoServer](http://www.GeoServer.com/) on OpenShift.
 
-This cartridge does't work in small gears.
-
 ## Use it
 
 In OpenShift, first create a web application (java, python, ruby, node... as you want), 
