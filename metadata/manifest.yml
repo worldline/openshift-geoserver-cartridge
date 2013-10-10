@@ -20,6 +20,9 @@ Publishes:
   publish-gear-endpoint:
     Type: "NET_TCP:gear-endpoint-info"
 Cart-Data:
+ - Key: connection_url
+   Type: cart_data
+   Description: geoserver connection URL
  - Key: OPENSHIFT_GEOSERVER_LOG_DIR
    Type: environment
    Description: "Directory to store application log files."
