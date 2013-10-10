@@ -9,6 +9,7 @@ This cartridge does't work in small gears.
 In OpenShift, first create a web application (java, python, ruby, node... as you want), 
 then add a downloaded cartridge, with the following URL : http://cartreflect-claytondev.rhcloud.com/reflect?github=worldline/openshift-geoserver-cartridge
 
+Geoserver is deployed on `/geoserver` URL
 
 ## Environment Variables
 
