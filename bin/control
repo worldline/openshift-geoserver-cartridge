@@ -51,7 +51,7 @@ function start {
 }
 
 function stop {
-  $OPENSHIFT_GEOSERVER_DIR/version/geoserver/bin/shutdown.sh
+  $GEOSERVER_HOME/bin/shutdown.sh
 }
 
 function restart {
